@@ -3,7 +3,7 @@ Commands for aws server creation
 
 ```
 Step1: chmod 400 aws-instance-key.pem
-Step2: ssh -i aws-instance-key.pem mailto:ubuntu@ec2-54-227-84-46.compute-1.amazonaws.com
+Step2: ssh -i aws-instance-key.pem mailto:ubuntu@ec2-74-327-94-56.compute-1.amazonaws.com
 
 Step3: sudo apt update && sudo apt upgrade -y
 Step4: sudo apt install nginx -y
@@ -40,7 +40,9 @@ curl -sS https://getcomposer.org/installer -o composer-setup.php
 sudo php composer-setup.php --install-dir=/usr/local/bin --filename=composer
 
 Step 22:
-ssh-keygen -t ed25519 -C "mailto:pod17@codeclouds.biz"
+ssh-keygen -t ed25519 -C "your_email@example.com"
+-or-
+ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
 cat ~/.ssh/id_ed25519.pub
 **added the key in GIT Repository
 
@@ -56,7 +58,7 @@ Site Config
 =====================================================
 server {
     listen 80;
-    server_name 54.227.84.46;  # Replace with your domain or IP address
+    server_name 96.225.95.32;  # Replace with your domain or IP address
     root /var/www/html/aws-instance/public;
 
     index index.php index.html index.htm;
